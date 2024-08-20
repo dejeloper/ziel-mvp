@@ -6,7 +6,11 @@ import { redirect } from "next/navigation";
 
 export async function fetchObjectives() {
   revalidatePath("/posts");
-  return await prisma.objective.findMany();
+  return await prisma.objective.findMany({
+    orderBy: {
+      id: "asc",
+    },
+  });
 }
 
 export async function createObjective(formData: FormData) {
