@@ -1,4 +1,4 @@
-import { ObjectiveForm } from "@/components/objective/objective-form";
+import { ObjectiveForm } from "@/components/content/objectives/objective-form";
 import prisma from "@/lib/prisma";
 import { redirect } from "next/navigation";
 

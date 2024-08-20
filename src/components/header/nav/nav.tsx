@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import { DailyButton, ModeToggle } from "@/components/navbar";
+import { DailyButton, ModeToggle } from "@/components/header/nav";
 
 const menuItems = [
   { name: "Inicio", url: "/home" },

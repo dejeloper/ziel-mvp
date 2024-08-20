@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { fetchObjectives } from "@/actions/objective-actions";
-import ObjectiveCard from "@/components/objective/objective-card";
+import ObjectiveCard from "@/components/content/objectives/objective-card";
 import { buttonVariants } from "@/components/ui/button";
 
 async function ObjectivePage() {
