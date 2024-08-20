@@ -4,6 +4,10 @@ import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
+export async function fetchObjectives() {
+  return await prisma.objective.findMany();
+}
+
 export async function createObjective(formData: FormData) {
   const name = formData.get("name")?.toString();
   const detail = formData.get("detail")?.toString();
