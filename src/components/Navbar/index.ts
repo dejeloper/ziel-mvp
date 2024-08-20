@@ -1,3 +1,3 @@
-export * from "./DailyButton";
-export * from "./ModeToggle";
-export * from "./Navbar";
+export * from "./daily-button";
+export * from "./mode-toggle";
+export * from "./navbar";

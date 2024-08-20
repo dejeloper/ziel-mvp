@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { DailyButton, ModeToggle } from "./";
+import { DailyButton, ModeToggle } from ".";
 import { usePathname } from "next/navigation";
 
 const menuItems = [
