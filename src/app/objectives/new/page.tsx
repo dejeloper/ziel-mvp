@@ -1,4 +1,4 @@
-import { ObjectiveForm } from "@/components/Objective/objective-form";
+import { ObjectiveForm } from "@/components/objective/objective-form";
 
 export default function NewObjectivePage() {
   return (

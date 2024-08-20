@@ -13,8 +13,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { DailyButton, ModeToggle } from ".";
 import { usePathname } from "next/navigation";
+import { DailyButton, ModeToggle } from "@/components/navbar";
 
 const menuItems = [
   { name: "Inicio", url: "/home" },
