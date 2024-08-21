@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function fetchObjectives() {
-  revalidatePath("/posts");
+  revalidatePath("/objectives");
   return await prisma.objective.findMany({
     orderBy: {
       id: "asc",
@@ -26,8 +26,8 @@ export async function createObjective(formData: FormData) {
     data: { name, detail, priority },
   });
 
-  revalidatePath("/objectives/");
-  redirect("/objectives/");
+  revalidatePath("/objectives");
+  redirect("/objectives");
 }
 
 export async function updateObjective(formData: FormData) {
@@ -49,8 +49,8 @@ export async function updateObjective(formData: FormData) {
     },
   });
 
-  revalidatePath("/objectives/");
-  redirect("/objectives/");
+  revalidatePath("/objectives");
+  redirect("/objectives");
 }
 
 export async function removeObjective(formData: FormData) {
@@ -63,6 +63,6 @@ export async function removeObjective(formData: FormData) {
     },
   });
 
-  revalidatePath("/objectives/");
-  redirect("/objectives/");
+  revalidatePath("/objectives");
+  redirect("/objectives");
 }

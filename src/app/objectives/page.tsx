@@ -1,14 +1,15 @@
+import { Suspense } from "react";
 import Link from "next/link";
-import { fetchObjectives } from "@/actions/objective-actions";
-import ObjectiveCard from "@/components/content/objectives/objective-card";
 import { buttonVariants } from "@/components/ui/button";
+import {
+  ObjectiveCardsAll,
+  SkeletonObjectiveCardsAll,
+} from "@/components/content/objectives";
 
 async function ObjectivePage() {
-  const objectives = await fetchObjectives();
-
   return (
     <>
-      <h1 className="text-4xl font-bold text-center  ">Listado de Objetivos</h1>
+      <h1 className="text-4xl font-bold text-center">Listado de Objetivos</h1>
       <section className="flex justify-end items-center mb-4">
         <Link
           href="/objectives/new"
@@ -17,11 +18,10 @@ async function ObjectivePage() {
           Crear un Objetivo
         </Link>
       </section>
-      <section className="grid grid-cols-2 gap-4">
-        {objectives.map((objective) => (
-          <ObjectiveCard objective={objective} key={objective.id} />
-        ))}
-      </section>
+
+      <Suspense fallback={<SkeletonObjectiveCardsAll />}>
+        <ObjectiveCardsAll />
+      </Suspense>
     </>
   );
 }
