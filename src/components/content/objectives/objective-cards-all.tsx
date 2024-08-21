@@ -5,7 +5,7 @@ export async function ObjectiveCardsAll() {
   const objectives = await fetchObjectives();
 
   return (
-    <section className="grid grid-cols-2 gap-4">
+    <section className="grid md:grid-cols-2 grid-cols-1 gap-4">
       {objectives.map((objective) => (
         <ObjectiveCard objective={objective} key={objective.id} />
       ))}
