@@ -15,11 +15,11 @@ export function SkeletonObjectiveCard() {
           <Skeleton className="w-80 h-20" />
           <Skeleton className="w-20 h-5 mt-2" />
         </div>
-        <div className="items-center p-6 pt-0 flex gap-x-2 md:gap-x-1 justify-between md:px-2">
-          <div className="flex gap-x-2 md:gap-x-1 justify-end md:justify-center">
+        <div className="items-center p-6 pt-0 flex gap-x-2 sm:gap-x-1 justify-between sm:px-2">
+          <div className="flex gap-x-2 sm:gap-x-1 justify-end sm:justify-center">
             <Skeleton className="w-20 h-10 ml-4" />
           </div>
-          <div className="flex gap-x-2 md:gap-x-1 justify-end md:justify-center">
+          <div className="flex gap-x-2 sm:gap-x-1 justify-end sm:justify-center">
             <Skeleton className="w-20 h-10 bg-blue-500/30 px-4 py-2" />
             <Skeleton className="w-20 h-10 bg-red-500/30 px-4 py-2" />
           </div>

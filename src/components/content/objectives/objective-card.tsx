@@ -37,7 +37,7 @@ export default function ObjectiveCard({ objective }: { objective: Objective }) {
           {new Date(objective.createdAt).toLocaleDateString()}
         </span>
       </CardContent>
-      <CardFooter className="flex gap-x-2 md:gap-x-1 justify-between md:px-2">
+      <CardFooter className="flex gap-x-2 sm:gap-x-1 justify-between sm:px-2">
         <div>
           <Link
             href={`/objectives/${objective.id}/edit`}
@@ -46,7 +46,7 @@ export default function ObjectiveCard({ objective }: { objective: Objective }) {
             Tareas
           </Link>
         </div>
-        <div className="flex gap-x-2 md:gap-x-1 justify-end md:justify-center">
+        <div className="flex gap-x-2 sm:gap-x-1 justify-end sm:justify-center">
           <Link
             href={`/objectives/${objective.id}/edit`}
             className={buttonVariants({ variant: "primary" })}

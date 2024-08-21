@@ -5,15 +5,19 @@ import {
   ObjectiveCardsAll,
   SkeletonObjectiveCardsAll,
 } from "@/components/content/objectives";
+import { cn } from "@/lib/utils";
 
 async function ObjectivePage() {
   return (
     <>
       <h1 className="text-4xl font-bold text-center">Listado de Objetivos</h1>
-      <section className="flex justify-end items-center mb-4">
+      <section className="flex sm:justify-end justify-start items-center my-4 ">
         <Link
           href="/objectives/new"
-          className={buttonVariants({ variant: "primary" })}
+          className={cn(
+            buttonVariants({ variant: "primary" }),
+            "sm:w-auto w-full"
+          )}
         >
           Crear un Objetivo
         </Link>
